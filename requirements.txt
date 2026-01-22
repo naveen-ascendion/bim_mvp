@@ -1,0 +1,5 @@
+crewai
+vertexai
+fastapi
+python-dotenv
+uvicorn

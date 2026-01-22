@@ -1,0 +1,190 @@
+{
+  "report_metadata": {
+    "report_name": "NA Tank & OJP Brand Monitoring Alert",
+    "report_date": "2026-01-21",
+    "generated_at": "2026-01-21T11:18:42Z",
+    "region": "North America",
+    "time_window": "2026-01-14 to 2026-01-21"
+  },
+  "data_coverage": {
+    "retailers_covered": [
+      "Amazon",
+      "Walmart",
+      "BestBuy",
+      "Target",
+      "Staples",
+      "OfficeDepot",
+      "Costco",
+      "eBay"
+    ],
+    "channels_covered": [
+      "Retail Reviews",
+      "Reddit",
+      "X"
+    ],
+    "total_reviews_analyzed": 1428,
+    "skus_covered": {
+      "HP": 6,
+      "Epson": 5,
+      "Canon": 5,
+      "Brother": 4
+    }
+  },
+  "at_a_glance_summary": [
+    "Street prices show HP competitive in entry and mid-level tank printers, with Epson discounting more aggressively.",
+    "Canon maintains the lowest bottle CPP, while compatible HP-targeted ink undercuts OEM by ~35%.",
+    "Sell-through trends vary by SKU, with Smart Tank 6001 strengthening and 7001 weakening."
+  ],
+  "brand_health_scorecard": {
+    "HP Smart Tank": {
+      "sentiment": "63% positive",
+      "trend": "↗",
+      "strengths": "Low running cost, good print quality",
+      "weaknesses": "Setup issues, bottle recognition errors"
+    },
+    "HP OJP": {
+      "sentiment": "58% positive",
+      "trend": "→",
+      "strengths": "Print speed, office reliability",
+      "weaknesses": "Wi-Fi setup and firmware updates"
+    },
+    "Epson EcoTank": {
+      "sentiment": "66% positive",
+      "trend": "↗",
+      "strengths": "Low cost per page, strong brand perception",
+      "weaknesses": "Build quality complaints"
+    },
+    "Canon MegaTank": {
+      "sentiment": "61% positive",
+      "trend": "→",
+      "strengths": "Print quality, reliability",
+      "weaknesses": "Availability, higher upfront price"
+    },
+    "Brother": {
+      "sentiment": "59% positive",
+      "trend": "→",
+      "strengths": "Durability, value",
+      "weaknesses": "Lower awareness, limited models"
+    }
+  },
+  "key_themes_issues": {
+    "Printhead failures": {
+      "unique_customers": 14,
+      "total_mentions": 22,
+      "top_channels": ["Amazon", "Reddit"],
+      "sample_quotes": [
+        "Printer stopped recognizing the printhead after three months.",
+        "Had to replace the printhead twice within a year."
+      ]
+    },
+    "Bottle not recognized": {
+      "unique_customers": 9,
+      "total_mentions": 11,
+      "top_channels": ["Amazon"],
+      "sample_quotes": [
+        "The ink bottle wouldn't register even though it was full."
+      ]
+    },
+    "Setup and Wi-Fi issues": {
+      "unique_customers": 17,
+      "total_mentions": 26,
+      "top_channels": ["Amazon", "Reddit"],
+      "sample_quotes": [
+        "Setup process kept failing on Wi-Fi connection."
+      ]
+    },
+    "Compatible / universal ink usage": {
+      "unique_customers": 12,
+      "total_mentions": 18,
+      "top_channels": ["Amazon", "Walmart"],
+      "sample_quotes": [
+        "Using third-party ink caused clogging issues."
+      ]
+    }
+  },
+  "compatible_printhead_activity": {
+    "compatible_ink_listings": {
+      "count": 21,
+      "retailers": ["Amazon", "Walmart", "eBay"],
+      "price_range": "$9.99-$18.99"
+    },
+    "printhead_listings": {
+      "found": true,
+      "skus": ["3YP86AL", "M0H51AL"],
+      "price_range": "$42-$59"
+    },
+    "notable_quotes": [
+      "After using refill ink, the printer started throwing printhead errors."
+    ]
+  },
+  "pricing_value_snapshot": {
+    "street_price_index": {
+      "Entry Tank": {
+        "HP": 100,
+        "Epson": 120,
+        "Canon": 130,
+        "Brother": 110
+      },
+      "Mid Tank": {
+        "HP": 100,
+        "Epson": 115,
+        "Canon": 125,
+        "Brother": 105
+      }
+    },
+    "promo_intensity": {
+      "HP": { "sku_on_promo_pct": 25, "avg_discount_pct": 10 },
+      "Epson": { "sku_on_promo_pct": 60, "avg_discount_pct": 15 },
+      "Canon": { "sku_on_promo_pct": 30, "avg_discount_pct": 12 },
+      "Brother": { "sku_on_promo_pct": 15, "avg_discount_pct": 8 }
+    },
+    "bottle_cpp": {
+      "HP_31": 0.05,
+      "Epson_522": 0.04,
+      "Canon_GI21": 0.03,
+      "Brother_180": 0.06
+    },
+    "map_health": {
+      "checked_skus": ["HP 31", "HP 32"],
+      "retailers_checked": 8,
+      "violations": 0,
+      "details": []
+    }
+  },
+  "sell_through_overlay": {
+    "6001": {
+      "sentiment_trend": "↗",
+      "sell_through_trend": "↗",
+      "commentary": "Positive sentiment aligns with improving sell-through."
+    },
+    "7001": {
+      "sentiment_trend": "↘",
+      "sell_through_trend": "↘",
+      "commentary": "Negative sentiment and declining sales suggest emerging risk."
+    },
+    "7602": {
+      "sentiment_trend": "→",
+      "sell_through_trend": "→",
+      "commentary": "Stable sentiment and steady sales."
+    },
+    "5101": {
+      "sentiment_trend": "↗",
+      "sell_through_trend": "↘",
+      "commentary": "Positive sentiment but declining sales may indicate pricing or availability issues."
+    }
+  },
+  "recommended_actions": {
+    "Urgent": [
+      "Investigate recurring 'not recognizing bottle' complaints on Amazon for Smart Tank 7001.",
+      "Review eBay listings for potential MAP pressure on HP 31 bottles."
+    ],
+    "Important": [
+      "Analyze competitive pricing pressure from Canon in entry tank segment.",
+      "Validate setup-related CX issues with support and firmware teams."
+    ],
+    "Watch": [
+      "Monitor growth of compatible ink listings targeting HP Smart Tank.",
+      "Track sentiment shifts around Wi-Fi and setup experience."
+    ]
+  }
+}

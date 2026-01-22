@@ -1,0 +1,27 @@
+# --------------------
+# Python
+# --------------------
+__pycache__/
+**/__pycache__/
+*.pyc
+
+# --------------------
+# Virtual environment
+# --------------------
+.venv/
+
+# --------------------
+# Environment & secrets
+# --------------------
+.env
+genai-platform-creds.json
+
+# --------------------
+# Data / generated outputs
+# --------------------
+analytics/*
+weekly_reports/*
+
+# Keep folder structure
+!analytics/.gitkeep
+!weekly_reports/.gitkeep
