@@ -3,3 +3,4 @@ vertexai
 fastapi
 python-dotenv
 uvicorn
+pandas

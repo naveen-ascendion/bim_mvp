@@ -114,43 +114,24 @@ CSV files updated in-place:
 # ===================================================
 issue_sizing_task = Task(
     description=f"""
-You MUST follow these exact steps.
+Run the issue sizing analytics pipeline.
 
 STEP 1:
-Use read_csv_file to read:
-- {ANALYTICS_DIR}/reviews_updated.csv
-- {ANALYTICS_DIR}/social_posts_updated.csv
+Call run_issue_sizing with:
+- reviews_csv = "{ANALYTICS_DIR}/reviews_updated.csv"
+- social_csv = "{ANALYTICS_DIR}/social_posts_updated.csv"
+- output_json = "{ANALYTICS_DIR}/issue_sizing.json"
 
 STEP 2:
-Compute issue sizing metrics per key_theme:
-- total_mentions
-- unique_customers (use reviewUrl or post identifier)
-- detect theme spikes if any
+Ensure the tool reports success.
 
-STEP 3:
-Construct a single JSON object with this structure:
-{{
-  "issue_sizing": [
-    {{
-      "key_theme": "...",
-      "total_mentions": <int>,
-      "unique_customers": <int>,
-      "spike_detected": <true|false>
-    }}
-  ]
-}}
-
-STEP 4:
-Call write_json_file with:
-- output_path = "{ANALYTICS_DIR}/issue_sizing.json"
-- json_data = constructed_object
-
-You MUST call write_json_file.
+You MUST call run_issue_sizing.
+Do NOT compute metrics manually.
 Do NOT return free text.
 """,
     agent=IssueSizingAgent,
     expected_output=f"""
-JSON file created:
+Issue sizing JSON created:
 - {ANALYTICS_DIR}/issue_sizing.json
 """
 )

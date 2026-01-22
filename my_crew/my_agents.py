@@ -7,7 +7,8 @@ from my_tools import (
     read_json_file,
     read_csv_file,
     write_csv_with_column,
-    write_json_file
+    write_json_file,
+    run_issue_sizing
 )
 
 # ---------------------------------------------------
@@ -95,22 +96,12 @@ IssueSizingAgent = Agent(
     role="Issue Sizing and Impact Assessment Specialist",
     goal="Quantify the magnitude and customer impact of identified issue themes.",
     backstory="""
-    You are a data analyst focused on separating signal from noise in
-    customer issue reporting.
-
-    Rather than relying on raw mention counts alone, you distinguish between:
-    - Total mentions of an issue
-    - Unique customers affected by that issue
-
-    Using themed review and social post datasets, you compute:
-    - Mentions per theme
-    - Unique customer counts per theme
-    - Theme spikes or sudden increases week-over-week
-
-    Your structured JSON output helps stakeholders prioritize issues based
-    on real customer impact, not just volume of complaints.
+    You are responsible for running a deterministic issue sizing pipeline.
+    You do NOT manually compute metrics.
+    Instead, you invoke a trusted analytics tool that performs
+    pandas-based aggregations and writes structured JSON output.
     """,
-    tools=[read_csv_file, read_json_file, write_json_file],
+    tools=[run_issue_sizing],
     llm=llm,
     allow_delegation=False,
     verbose=True
